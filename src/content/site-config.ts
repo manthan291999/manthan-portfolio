@@ -3,7 +3,7 @@ export const siteConfig = {
   role: "AI Engineer & Software Developer",
   tagline: "I build intelligent systems that solve real-world problems — from ML pipelines to full-stack applications.",
   email: "manthanmittal93@gmail.com",
-  location: "India",
+  location: "UK / India",
   available: true,
   resumeUrl: "/Manthan_Mittal_Resume_AI_Robotics.pdf",
   social: {
@@ -13,7 +13,7 @@ export const siteConfig = {
   },
   stats: [
     { label: "Projects Shipped", value: "15+" },
-    { label: "Years Experience", value: "3+" },
+    { label: "Years Experience", value: "5+" },
     { label: "Technologies", value: "30+" },
     { label: "Client Satisfaction", value: "100%" },
   ],
@@ -55,8 +55,10 @@ export const siteConfig = {
   nav: [
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
+    { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#skills" },
+    { label: "Education", href: "#education" },
     { label: "Resume", href: "#resume" },
     { label: "Contact", href: "#contact" },
   ],

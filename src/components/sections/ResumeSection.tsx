@@ -10,20 +10,20 @@ import TiltCard from "@/components/effects/TiltCard";
 const highlights = [
   {
     icon: Briefcase,
-    title: "3+ Years Experience",
-    description: "AI Engineering & Full-Stack Development across startups and enterprise.",
+    title: "5+ Years Experience",
+    description: "From freelance web development to AI & data analytics for international clients.",
     accent: "cyan",
   },
   {
     icon: Award,
-    title: "15+ Projects Delivered",
-    description: "Production ML systems, real-time applications, and developer tools.",
+    title: "MSc in AI (Essex, UK)",
+    description: "Advanced AI/ML expertise from a top UK university, combined with hands-on engineering.",
     accent: "violet",
   },
   {
     icon: GraduationCap,
-    title: "Continuous Learner",
-    description: "Always exploring the latest in AI research, cloud architecture, and engineering best practices.",
+    title: "15+ Projects Delivered",
+    description: "E-commerce platforms, automation tools, predictive models, and real-time applications.",
     accent: "amber",
   },
 ];
@@ -87,11 +87,28 @@ export default function ResumeSection() {
         {/* PDF Viewer */}
         <SectionReveal delay={0.15}>
           <div className="bg-surface rounded-[18px] border border-[var(--border-hairline)] shadow-[var(--shadow-soft)] overflow-hidden mb-12 gradient-border">
-            <iframe
-              src={siteConfig.resumeUrl}
-              className="w-full h-[600px] max-md:h-[400px]"
-              title="Resume Preview"
-            />
+            <object
+              data={siteConfig.resumeUrl}
+              type="application/pdf"
+              className="w-full h-[700px] max-md:h-[500px]"
+              aria-label="Resume Preview"
+            >
+              {/* Fallback for browsers that can't render PDFs inline */}
+              <div className="flex flex-col items-center justify-center h-[400px] gap-4 px-6 text-center">
+                <FileText size={48} className="text-text-muted" />
+                <p className="text-[15px] text-text-secondary font-medium">
+                  PDF preview is not supported in your browser.
+                </p>
+                <a
+                  href={siteConfig.resumeUrl}
+                  download
+                  className="inline-flex items-center gap-2 h-[42px] px-5 rounded-[12px] bg-text-primary text-base text-[13px] font-bold hover:shadow-hover transition-all"
+                >
+                  <Download size={14} />
+                  Download Resume
+                </a>
+              </div>
+            </object>
           </div>
         </SectionReveal>
 
